@@ -11,3 +11,5 @@ Tasks futuras:
 [X] Passar para digitado as anotações que o Thiago fez
 [] Descrever melhor as dificuldades que pessoas autistas enfrentam (listar cada uma delas e se vamos endereçar. Se sim, como)
 [] Fazer uma análise do dataset (qual é a natureza dele, como ele funciona, quantidade de notícias)
+
+Link para a analise quantitativa: https://docs.google.com/spreadsheets/d/1fXLlMSLVZtFa9gDUIheUCj8UpoR4pvd-O1m5ijtz89U/edit?usp=sharing
