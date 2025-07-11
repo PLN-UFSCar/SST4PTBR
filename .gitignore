@@ -1,0 +1,25 @@
+# Ignorar o meu Virtual Environment
+ironia_venv/
+
+# Ignorar a pasta de dados (por enquanto)
+PLNCrawler/
+
+# Ignorar arquivos de checkpoint do Jupyter
+.ipynb_checkpoints/
+
+# Ignorar arquivos compilados Python
+__pycache__/
+*.py[cod]
+
+# Ignore ambientes virtuais
+.venv/
+venv/
+.env/
+.envrc
+.conda
+
+# Ignore dados e modelos (por enquanto)
+*.pkl
+*.parquet
+ironia/vetor_word2vec.csv
+ironia/frase_processada.csv
