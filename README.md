@@ -34,6 +34,12 @@ git clone https://github.com/PLN-UFSCar/PLN-SO-2025-01-Proj-G03.git
 cd PLN-SO-2025-01-Proj-G03/ironia
 ```
 
+### Clone o Dataset
+O Dataset é o [PLNCrawler](https://github.com/schuberty/PLNCrawler/tree/master).
+```
+git clone https://github.com/schuberty/PLNCrawler.git
+```
+
 ### Crie os três ambientes virtuais necessários
 _Lembre-se de ter Conda instalado na sua máquina!_
 ```
