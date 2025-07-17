@@ -53,3 +53,16 @@ Para executar o Notebook da main
 ```
 jupyter notebook
 ```
+
+### Entre no arquivo main.ipynb
+Se for a sua primeira vez executando o código, coloque a variável carregar_modelo como False na sessão "Segunda abordagem para detecção: Fine-tuning de um modelo Sentence Transformer". Dessa forma, o modelo é treinado do zero.
+
+```
+carregar_modelo = False
+```
+
+Além disso, você pode escolher a sua estratégia (word2vec ou sequence transformers). Para isso, mude as variáveis da célula conforme a sua necessidade.
+```
+usar_word2vec = False
+usar_sequence_transformer = not usar_word2vec
+```
