@@ -1,0 +1,24 @@
+name: ambiguidade
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11.13
+  - pip=25.1
+
+  # NLP e ML
+  - numpy=2.0.1
+  - pandas=2.2.3
+  - scikit-learn=1.7.0
+  - spacy=3.8.7
+  - nltk=3.9.1
+  - transformers=4.51.3
+  - datasets=3.3.2
+  - tokenizers=0.21.0
+  - huggingface_hub=0.31.2
+  - jupyterlab
+  - pytorch
+  
+  # Pacotes via pip
+  - pip:
+      - wn

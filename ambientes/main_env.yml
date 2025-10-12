@@ -1,0 +1,25 @@
+name: main
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.10.18
+  - pip=25.1
+  - gcc_linux-64
+  - numpy=2.2.5
+  - pandas=2.2.3
+  - scikit-learn=1.6.1
+  - scipy=1.15.3
+  - nltk=3.9.1
+  - spacy=3.8.2
+  - sentence-transformers=5.0.0
+  - transformers=4.53.1
+  - jupyterlab=4.3.4
+  - ipykernel=6.29.5
+  - matplotlib-inline=0.1.6
+  - pip:
+      - accelerate==1.8.1
+      - huggingface_hub[hf_xet]
+      - google-generativeai
+      - PyHyphen

@@ -11,18 +11,18 @@ Para atingir o objetivo, são realizadas três tarefas: a primeira de detecção
 [Paula Caires](https://github.com/paulacaires)  
 [Pedro Alves](https://github.com/pedrohaas)
 
+## Análise quantitativa
+
+No arquivo `analise.xlsx` está disponível a planilha com a análise quantitativa feita pelos membros do grupo.
+
 ## Pré-requisitos
 
 > [!IMPORTANT]
-> A versão do Python é 3.10
+> Tenha o docker e o docker compose instalados 
 
-- Instale o [Conda](https://anaconda.org/anaconda/conda)
-  
-Os passos foram executados no terminal de uma máquina Linux, mas também se aplicam à Windows com as devidas adaptações.
+- Garanta que você tenha o docker e o docker compose instalados em sua máquina. [Acesse aqui a documentação do docker](https://www.docker.com/).
 
 ## Passo a passo
-
-Essas instruções fornecerão uma cópia do projeto em funcionamento na sua máquina local para fins de desenvolvimento e testes.
 
 ### Faça o clone do projeto
 ```
@@ -31,44 +31,35 @@ git clone https://github.com/PLN-UFSCar/PLN-SO-2025-01-Proj-G03.git
 
 ### Entre no diretório do projeto
 ```
-cd PLN-SO-2025-01-Proj-G03/ironia
+cd PLN-SO-2025-01-Proj-G03
 ```
 
 ### Clone o Dataset
-O Dataset é o [PLNCrawler](https://github.com/schuberty/PLNCrawler/tree/master).
+Clone o repositório [PLNCrawler](https://github.com/schuberty/PLNCrawler/tree/master) que contem o dataset utilizado.
 ```
 git clone https://github.com/schuberty/PLNCrawler.git
 ```
 
-### Crie os três ambientes virtuais necessários
-_Lembre-se de ter Conda instalado na sua máquina!_
-```
-conda env create -f word2vec_env.yml
-conda env create -f ambiguidade_env.yml
-conda env create -f main_env.yml
-```
-Aceite os Termos de Serviço do Conda se solicitado.
+### Faça o download do lexico disponível em [OpenWordnet-PT](https://github.com/own-pt/openWordnet-PT/releases), cujo nome é `own-pt.tar.gz`, e o coloque dentro da pasta `lexico` do projeto.
 
-### Ative o ambiente ironia_env
+### Execute o projeto usando o docker
 ```
-conda activate ironia_env
+docker compose up -d --build
 ```
 
-### Abra o Jupyter Notebook
-Para executar o Notebook da main
-```
-jupyter notebook
-```
-
-### Entre no arquivo main.ipynb
+### Acesse o [notebook principal](http://localhost:8888/lab/tree/notebooks/main.ipynb).
 Se for a sua primeira vez executando o código, coloque a variável carregar_modelo como False na sessão "Segunda abordagem para detecção: Fine-tuning de um modelo Sentence Transformer". Dessa forma, o modelo é treinado do zero.
-
-```
+```python
 carregar_modelo = False
 ```
 
 Além disso, você pode escolher a sua estratégia (word2vec ou sequence transformers). Para isso, mude as variáveis da célula conforme a sua necessidade.
-```
+```python
 usar_word2vec = False
 usar_sequence_transformer = not usar_word2vec
+```
+
+Você também deverá colocar sua chave da API do Google Gemini na variável `API_KEY`.
+```python
+API_KEY = 'sua_chave_aqui'
 ```
