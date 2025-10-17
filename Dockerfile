@@ -11,6 +11,7 @@
     RUN conda env create -f /app/ambientes/ambiguidade_env.yml && \
         conda env create -f /app/ambientes/main_env.yml && \
         conda env create -f /app/ambientes/word2vec_env.yml && \
+        conda env create -f /app/ambientes/transformers_env.yml && \
         conda run -n ambiguidade python -m spacy download pt_core_news_sm && \
         conda run -n main python -m spacy download pt_core_news_sm
 
