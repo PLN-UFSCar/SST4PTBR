@@ -65,28 +65,28 @@ if __name__ == '__main__':
 
         modelo, embeddings, indices_validos = aplica_word2vec(df, coluna, estrategia)
 
-        modelo.save("modelo_word2vec.model")
+        modelo.save("../modelos/modelo_word2vec.model")
 
         fim = time.perf_counter()
         print(f"[INFO] Treinamento concluído em {fim - inicio:.2f} segundos.")
 
         # Salvar embeddings
-        with open("embeddings_output.pkl", "wb") as f:
+        with open("../temp/embeddings_output.pkl", "wb") as f:
             pickle.dump(embeddings, f)
 
         # Salvar índices válidos
-        with open("indices_validos.pkl", "wb") as f:
+        with open("../temp/indices_validos.pkl", "wb") as f:
             pickle.dump(indices_validos, f)
 
         print(f"[INFO] Embeddings e índices salvos com sucesso.")
     
     elif action == 1:
         # ler os tokens da frase de um arquivo CSV
-        tokens = pd.read_csv("frase_processada.csv")["tokens"].tolist()[0]
+        tokens = pd.read_csv("../temp/frase_processada.csv")["tokens"].tolist()[0]
         print(f"[INFO] Tokens lidos: {tokens}")
 
         # Carregar o modelo Word2Vec
-        w2v_model = Word2Vec.load("modelo_word2vec.model")
+        w2v_model = Word2Vec.load("../modelos/modelo_word2vec.model")
 
         vetor = vetor_medio(tokens, w2v_model)
         print(f"[INFO] Vetor médio calculado: {vetor}")
@@ -96,9 +96,9 @@ if __name__ == '__main__':
         print(f"[INFO] Vetor reshaped: {vetor.shape}")
 
         # Salvar o vetor em um arquivo CSV
-        pd.DataFrame(vetor).to_csv("vetor_word2vec.csv", index=False, header=False)
+        pd.DataFrame(vetor).to_csv("../temp/vetor_word2vec.csv", index=False, header=False)
 
         # Ler o vetor salvo no arquivo CSV
-        vetor_carregado = pd.read_csv("vetor_word2vec.csv", header=None).values
+        vetor_carregado = pd.read_csv("../temp/vetor_word2vec.csv", header=None).values
         print(f"[INFO] Vetor carregado do CSV: {vetor_carregado}")
         
