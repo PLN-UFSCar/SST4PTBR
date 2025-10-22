@@ -21,7 +21,7 @@
     #Ativa os ambientes e instala os kernels do jupyterlab
     RUN /opt/conda/envs/ambiguidade/bin/python -m ipykernel install --user --name ambiguidade --display-name "Python (Ambiguidade)" && \
         /opt/conda/envs/main/bin/python -m ipykernel install --user --name main --display-name "Python (Main)" && \
-        /opt/conda/envs/word2vec/bin/python -m ipykernel install --user --name word2vec --display-name "Python (Word2Vec)"
+        /opt/conda/envs/word2vec_env/bin/python -m ipykernel install --user --name word2vec_env --display-name "Python (Word2Vec)"
 
     COPY . /app/
 

@@ -1,4 +1,4 @@
-name: word2vec
+name: word2vec_env
 channels:
   - defaults
   - conda-forge
