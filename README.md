@@ -4,13 +4,6 @@ A tarefa de PLN proposta tem como objetivo a detecção e eliminação de ironia
 
 Para atingir o objetivo, são realizadas três tarefas: a primeira de detecção de frases possivelmente irônicas no texto. Em seguida, detectando o sentido de palavras possivelmente ambíguas no texto. Por fim, utiliza-se as informações das etapas anteriores para enriquecer um prompt para reescrever o texto.
 
-## Autores
-[Beatriz Patrício](https://github.com/BeatrizPat)  
-[Carlos de França](https://github.com/carlos-hfm)  
-[Luis Felipe Souza](https://github.com/LuisFSouza)  
-[Paula Caires](https://github.com/paulacaires)  
-[Pedro Alves](https://github.com/pedrohaas)
-
 ## Análise quantitativa
 
 No arquivo `analise.xlsx` está disponível a planilha com a análise quantitativa feita pelos membros do grupo.
