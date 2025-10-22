@@ -1,4 +1,4 @@
-# Detection of sarcasm and textual ambiguities with prompt enrichment for linguistic transformation
+# SST4PTBR - Detection of sarcasm and textual ambiguities with prompt enrichment for linguistic transformation
 
 The proposed NLP task aims at the detection and elimination of sarcasm and lexical ambiguities in texts, aiming to make them clearer and more objective.
 
