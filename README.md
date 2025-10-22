@@ -1,58 +1,58 @@
-# Detecção de sarcasmos e ambiguidades textuais com enriquecimento de prompts para transformação linguística
+# Detection of sarcasm and textual ambiguities with prompt enrichment for linguistic transformation
 
-A tarefa de PLN proposta tem como objetivo a detecção e eliminação de ironias e ambiguidades lexicais em textos, visando torná-los mais claros e objetivos.
+The proposed NLP task aims at the detection and elimination of sarcasm and lexical ambiguities in texts, aiming to make them clearer and more objective.
 
-Para atingir o objetivo, são realizadas três tarefas: a primeira de detecção de frases possivelmente irônicas no texto. Em seguida, detectando o sentido de palavras possivelmente ambíguas no texto. Por fim, utiliza-se as informações das etapas anteriores para enriquecer um prompt para reescrever o texto.
+To achieve this goal, three tasks are performed: first, detecting possibly sarcastic sentences in the text. Second, detecting the meaning of possibly ambiguous words in the text. Finally, the information from the previous steps is used to enrich a prompt for rewriting the text.
 
-## Análise quantitativa
+## Quantitative analysis
 
-No arquivo `analise.xlsx` está disponível a planilha com a análise quantitativa feita pelos membros do grupo.
+The spreadsheet with the quantitative analysis done by the project members is available in the `analisys.xlsx` file.
 
-## Pré-requisitos
+## Prerequisites
 
 > [!IMPORTANT]
-> Tenha o docker e o docker compose instalados 
+> Have docker and docker compose installed
 
-- Garanta que você tenha o docker e o docker compose instalados em sua máquina. [Acesse aqui a documentação do docker](https://www.docker.com/).
+- Ensure you have docker and docker compose installed on your machine. [Access the docker documentation here](https://www.docker.com/).
 
-## Passo a passo
+## Step-by-step
 
-### Faça o clone do projeto
+### Clone the project
 ```
-git clone https://github.com/PLN-UFSCar/PLN-SO-2025-01-Proj-G03.git
-```
-
-### Entre no diretório do projeto
-```
-cd PLN-SO-2025-01-Proj-G03
+git clone https://github.com/PLN-UFSCar/SST4PTBR.git
 ```
 
-### Clone o Dataset
-Clone o repositório [PLNCrawler](https://github.com/schuberty/PLNCrawler/tree/master) que contem o dataset utilizado.
+### Enter the project directory
+```
+cd SST4PTBR
+```
+
+### Clone the Dataset
+Clone the [PLNCrawler](https://github.com/schuberty/PLNCrawler/tree/master) repository which contains the dataset used.
 ```
 git clone https://github.com/schuberty/PLNCrawler.git
 ```
 
-### Faça o download do lexico disponível em [OpenWordnet-PT](https://github.com/own-pt/openWordnet-PT/releases), cujo nome é `own-pt.tar.gz`, e o coloque dentro da pasta `lexico` do projeto.
+### Download the lexicon available at [OpenWordnet-PT](https://github.com/own-pt/openWordnet-PT/releases), named `own-pt.tar.gz`, and place it inside the project's `lexicon` folder.
 
-### Execute o projeto usando o docker
+### Run the project using docker
 ```
 docker compose up -d --build
 ```
 
-### Acesse o [notebook principal](http://localhost:8888/lab/tree/notebooks/main.ipynb).
-Se for a sua primeira vez executando o código, coloque a variável carregar_modelo como False na sessão "Segunda abordagem para detecção: Fine-tuning de um modelo Sentence Transformer". Dessa forma, o modelo é treinado do zero.
+### Access the [main notebook](http://localhost:8888/lab/tree/notebooks/main.ipynb).
+If it's your first time running the code, set the `load_model` variable to `False` in the session "Second approach for detection: Fine-tuning of a Sentence Transformer model". This way, the model is trained from scratch.
 ```python
-carregar_modelo = False
+load_model = False
 ```
 
-Além disso, você pode escolher a sua estratégia (word2vec ou sequence transformers). Para isso, mude as variáveis da célula conforme a sua necessidade.
+Additionally, you can choose your strategy (word2vec or sequence transformers). To do this, change the variables in the cell according to your needs.
 ```python
-usar_word2vec = False
-usar_sequence_transformer = not usar_word2vec
+use_word2vec = False
+use_sequence_transformer = not use_word2vec
 ```
 
-Você também deverá colocar sua chave da API do Google Gemini na variável `API_KEY`.
+You will also need to put your Google Gemini API key in the `API_KEY` variable.
 ```python
-API_KEY = 'sua_chave_aqui'
+API_KEY = 'your_key_here'
 ```
