@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report, accuracy_score, precision_sco
 from datasets import Dataset
 import joblib
 
-OUTPUT_DIR = "modelo_finetunado_sarcasmo"
+OUTPUT_DIR = "../modelos/modelo_finetunado_sarcasmo"
 
 
 def sentence_transformer(df, modelo, salvar_em=OUTPUT_DIR):
@@ -84,7 +84,7 @@ def sentence_transformer(df, modelo, salvar_em=OUTPUT_DIR):
 
     print('  Salvando modelo e classificador...')
     modelo.save(salvar_em)
-    joblib.dump(clf, os.path.join(salvar_em, "classificador_logreg.pkl"))
+    joblib.dump(clf, os.path.join(salvar_em, "../modelos/classificador_logreg.pkl"))
     print(f"  Modelo salvo em: {salvar_em}")
 
     return modelo
