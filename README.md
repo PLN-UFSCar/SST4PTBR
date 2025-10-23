@@ -52,6 +52,8 @@ use_word2vec = False
 use_sequence_transformer = not use_word2vec
 ```
 
+When using Transformers approach, you will need to run [another notebook](notebooks/fine_tuning.ipynb) on Google Colab, to do the fine-tuning of the pretrained model. This is better explained in the notebooks. 
+
 You will also need to put your Google Gemini API key in the `API_KEY` variable.
 ```python
 API_KEY = 'your_key_here'

@@ -1,0 +1,6 @@
+torch
+pandas
+sentence-transformers==5.0.0
+scikit-learn
+datasets
+accelerate>=0.26.0
