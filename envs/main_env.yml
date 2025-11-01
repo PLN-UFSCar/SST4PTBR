@@ -19,8 +19,8 @@ dependencies:
   - ipykernel=6.29.5
   - matplotlib-inline=0.1.6
   - ipywidgets
+  - huggingface_hub=0.31.2
   - pip:
       - accelerate==1.8.1
-      - huggingface_hub[hf_xet]
       - google-generativeai
       - PyHyphen

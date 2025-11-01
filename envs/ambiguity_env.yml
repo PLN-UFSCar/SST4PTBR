@@ -1,4 +1,4 @@
-name: ambiguidade
+name: ambiguity
 channels:
   - defaults
   - conda-forge
@@ -6,7 +6,7 @@ dependencies:
   - python=3.11.13
   - pip=25.1
 
-  # NLP e ML
+  # NLP and ML
   - numpy=2.0.1
   - pandas=2.2.3
   - scikit-learn=1.7.0
@@ -19,6 +19,6 @@ dependencies:
   - jupyterlab
   - pytorch
   
-  # Pacotes via pip
+  # Packages via pip
   - pip:
       - wn
