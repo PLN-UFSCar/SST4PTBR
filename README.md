@@ -46,4 +46,4 @@ docker compose up -d --build
 ```
 
 ### Access the [main notebook](http://localhost:8888/lab/tree/notebooks/main.ipynb).
-Acess the main notebook and follow the steps described in this.
+Access the main notebook and follow the steps described in this.
