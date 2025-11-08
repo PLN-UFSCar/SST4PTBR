@@ -2,7 +2,20 @@
 
 The proposed NLP task aims at the detection and elimination of sarcasm and lexical ambiguities in texts, aiming to make them clearer and more objective.
 
+## Steps
+
 To achieve this goal, three tasks are performed: first, detecting possibly sarcastic sentences in the text. Second, detecting the meaning of possibly ambiguous words in the text. Finally, the information from the previous steps is used to enrich a prompt for rewriting the text.
+
+<div align = "center">
+    <img src="https://github.com/user-attachments/assets/3c6ad7fe-8a38-46a4-9d76-6f0f7f8de54c">
+</div>
+
+## Examples
+| Original text | Rewritten text |
+|---|---|
+| Claro que adorei a sua "ajuda" na arrumação da casa. É impressionante como o simples ato de você ficar sentado no sofá fez tudo se organizar magicamente. | Eu não gostei da sua ação durante a arrumação da residência. Sua permanência sentada no sofá não causou a organização das coisas. |
+| O trânsito na cidade na véspera de feriado é muito fluido. É um prazer dirigir por horas a uma velocidade média de 5 km/h, apreciando a paisagem dos outros carros. O som das buzinas forma uma sinfonia harmoniosa que acalma os nervos. Chegar ao seu destino é apenas um detalhe. A verdadeira aventura é o caminho. | O trânsito na cidade na véspera de feriado é muito lento e congestionado. É incômodo dirigir por horas a uma velocidade média de 5 km/h, vendo os outros carros ao redor. O som das buzinas cria um barulho alto que causa estresse. Atingir o destino final é o objetivo principal. O percurso é difícil. |
+| Decidi adotar um filhote de cachorro para ter mais companhia em casa. Ele é um anjinho, super calmo e obediente. Meu novo chinelo, que ele carinhosamente roeu, ficou com um design muito mais arrojado. As poças de xixi em lugares aleatórios da casa dão um toque de surpresa ao meu dia. Ensinar a dar a pata tem sido um processo rápido. | Eu decidi adotar um filhote de cachorro para ter mais companhia na minha residência. Ele não é calmo nem obediente. Meu chinelo novo foi roído por ele. O chinelo ficou danificado. Ele fez poças de urina em locais aleatórios da residência. Isso causa transtorno durante o meu dia. Ensinar a dar a pata tem sido um processo demorado. |
 
 ## Quantitative analysis
 
@@ -27,34 +40,10 @@ git clone https://github.com/PLN-UFSCar/SST4PTBR.git
 cd SST4PTBR
 ```
 
-### Clone the Dataset
-Clone the [PLNCrawler](https://github.com/schuberty/PLNCrawler/tree/master) repository which contains the dataset used.
-```
-git clone https://github.com/schuberty/PLNCrawler.git
-```
-
-### Download the lexicon available at [OpenWordnet-PT](https://github.com/own-pt/openWordnet-PT/releases), named `own-pt.tar.gz`, and place it inside the project's `lexicon` folder.
-
 ### Run the project using docker
 ```
 docker compose up -d --build
 ```
 
 ### Access the [main notebook](http://localhost:8888/lab/tree/notebooks/main.ipynb).
-If it's your first time running the code, set the `load_model` variable to `False` in the session "Second approach for detection: Fine-tuning of a Sentence Transformer model". This way, the model is trained from scratch.
-```python
-load_model = False
-```
-
-Additionally, you can choose your strategy (word2vec or sequence transformers). To do this, change the variables in the cell according to your needs.
-```python
-use_word2vec = False
-use_sequence_transformer = not use_word2vec
-```
-
-When using Transformers approach, you will need to run [another notebook](notebooks/fine_tuning.ipynb) on Google Colab, to do the fine-tuning of the pretrained model. This is better explained in the notebooks. 
-
-You will also need to put your Google Gemini API key in the `API_KEY` variable.
-```python
-API_KEY = 'your_key_here'
-```
+Acess the main notebook and follow the steps described in this.
