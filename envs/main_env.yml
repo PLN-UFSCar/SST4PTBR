@@ -23,4 +23,3 @@ dependencies:
   - pip:
       - accelerate==1.8.1
       - google-generativeai
-      - PyHyphen

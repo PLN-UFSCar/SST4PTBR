@@ -19,7 +19,7 @@ To achieve this goal, three tasks are performed: first, detecting possibly sarca
 
 ## Quantitative analysis
 
-The spreadsheet with the quantitative analysis done by the project members is available in the `analisys.xlsx` file.
+A spreadsheet with a quantitative analysis of the system's results using metrics is available in the `evaluation` folder.
 
 ## Prerequisites
 
