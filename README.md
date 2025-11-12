@@ -7,7 +7,7 @@ The proposed NLP task aims at the detection and elimination of sarcasm and lexic
 To achieve this goal, three tasks are performed: first, detecting possibly sarcastic sentences in the text. Second, detecting the meaning of possibly ambiguous words in the text. Finally, the information from the previous steps is used to enrich a prompt for rewriting the text.
 
 <div align = "center">
-    <img src="https://github.com/user-attachments/assets/3c6ad7fe-8a38-46a4-9d76-6f0f7f8de54c">
+    <img src="https://github.com/user-attachments/assets/f27b9432-874b-4afb-bd59-d3c5fe6af968">
 </div>
 
 ## Examples
